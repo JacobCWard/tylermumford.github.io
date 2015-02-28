@@ -1,7 +1,8 @@
 var gulp = require('gulp');
 
 gulp.task('default', function() {
-  // place code for your default task here
+  gulp.src(['donate/**'])
+  .pipe(gulp.dest('_site/donate'));
 });
 
 gulp.task('clean', function() {
