@@ -5,22 +5,31 @@
   <meta charset="UTF-8" />
   <title>{{ page.title }} &mdash; {{ site.name }}</title>
   <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600" rel="stylesheet" type="text/css">
-  <link href="/css/default-structure.css" rel="stylesheet" />
+  <!-- <link href="/css/default-structure.css" rel="stylesheet" /> -->
+  <link href="/css/bootstrap.min.css" rel="stylesheet" />
   <link href="/css/global-style.css" rel="stylesheet" />
   <link rel="shortcut icon" href="/favicon.png" />
 </head>
 
 <body>
-<header>
-  <h1>
-    <a href="/" class="titleLink">{{ site.name }}</a>
-  </h1>
-  <p class="byline">{{ site.byline }}</p>
-</header>
 
-<nav class="main-navbar">
-{% include main-nav.html %}
-</nav>
+<div class="container">
+  <header class="row">
+    <div class="col-xs-12">
+      <h1>
+        <a href="/" class="titleLink">{{ site.name }}</a>
+      </h1>
+    </div>
+    <div class="col-xs-12">
+      <p class="byline">{{ site.byline }}</p>
+    </div>
+  </header>
+  <nav class="main-navbar row">
+  {% include main-nav.html %}
+  </nav>
+</div>
+
+
 
 <article>
 {{ content }}
